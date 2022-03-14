@@ -12,6 +12,6 @@ plugins:
   - react
   - '@typescript-eslint'
 rules: 
-brace-style:
-  - warn
-  - 1tbs
+  brace-style:
+    - warn
+    - 1tbs
