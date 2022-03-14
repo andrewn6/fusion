@@ -3,5 +3,8 @@
   "version": "1.0.0",
   "description": "A music platform built for muscians by muscians",
   "main": "index.js",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "next": "^12.1.0"
+  }
 }
