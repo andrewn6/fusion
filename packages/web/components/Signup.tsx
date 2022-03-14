@@ -1,5 +1,5 @@
 import type { NextPage } from 'next'
-
+import 'tailwind'
 const Signup: NextPage = () => {
     return (
         <div>
