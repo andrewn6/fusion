@@ -15,7 +15,6 @@
     "noUnusedLocals": false,
     "useUnknownInCatchVariables": false,
     "baseUrl": ".",
-    "types": "module",
     "paths": {
       "~/*": ["./src/*"]
     },
