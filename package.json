@@ -1,0 +1,7 @@
+{
+  "name": "fusion",
+  "version": "1.0.0",
+  "description": "A music platform built for muscians by muscians",
+  "main": "index.js",
+  "license": "MIT"
+}
