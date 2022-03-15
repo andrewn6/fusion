@@ -9,7 +9,7 @@ export async function ApiError (
 }
 
 export async function executeOrFail<T>(
-    cb: () => <T> | Promise<T>,
+    cb: () => T | Promise<T>,
     status = 500,
     message = "Internal server error.",
     code: ApiCode = "unknown"
