@@ -5,6 +5,7 @@ import { ContentTypeParserDoneFunction } from "fastify/types/content-type-parser
 export const SignupMethodEnum = createEnum("SignupMethod", [
     "EMAIL",
     "TWITTER",
+    "DISCORD",
 ]);
 
 
