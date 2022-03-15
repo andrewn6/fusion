@@ -1,5 +1,4 @@
 import { Type } from "@sinclair/typebox";
-import { type } from "os";
 
 export const User = Type.Object({
     id: Type.String(),
