@@ -5,3 +5,7 @@
 * {
   box-sizing: border-box !important;
 }
+:disabled {
+  pointer-events: none;
+  opacity: 0.6
+}

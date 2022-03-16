@@ -6,6 +6,7 @@
   "license": "MIT",
   "dependencies": {
     "fastify-cli": "^2.15.0",
+    "formik": "^2.2.9",
     "next": "^12.1.0"
   },
   "devDependencies": {
