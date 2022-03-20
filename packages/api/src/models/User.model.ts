@@ -1,6 +1,7 @@
 import { DateTime, Default, Id, Model, OneToMany, Property, PropertyDecoratorWrapper, Unique, UpdatedAt } from "decotix";
 import { SignupMethodEnum, SignupMethodType} from "~/enums/SignupMethod.enum";
 import { SocialProviderEnum } from "~/enums/SocialProvider.enum";
+import { SocialConnection } from "./SocialConnection.model";
 
 @Model()
 export class User {
@@ -36,8 +37,8 @@ export class User {
     @Property(() => String, { nullable: true })
     password?: string;
 
-    //@OneToMany(() => SocialConnection, (a) => a.user)
-    //socialConnections: SocialConnection[];
+    @OneToMany(() => SocialConnection, (a) => a.user)
+    socialConnections: SocialConnection[];
 
     //@OneToMany(() => TokenCluster, (a) => a.user)
     //tokenClusters: TokenCluster[];
