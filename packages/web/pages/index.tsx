@@ -4,7 +4,7 @@ import Signup from '../components/Signup'
 const Home: NextPage = () => {
   return (
     <div>
-      <Signup/>
+      <h1>Soon... 👀</h1>
     </div>
   )
 }
