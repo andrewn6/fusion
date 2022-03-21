@@ -4,7 +4,9 @@ import Signup from '../components/Signup'
 const Home: NextPage = () => {
   return (
     <div>
-      <h1>Soon... 👀</h1>
+    
+      <h1 className="content-start text-2xl"> Soon... 👀</h1>
+   
     </div>
   )
 }
