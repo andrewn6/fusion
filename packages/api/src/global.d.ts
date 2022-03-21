@@ -7,4 +7,7 @@ declare module "fastify" {
     interface FastifyRequest extends FastifyRequest {
         user: User;
     }
+    interface FastifyRequest {
+        userId: string
+    }
 }
