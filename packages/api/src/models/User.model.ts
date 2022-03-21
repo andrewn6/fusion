@@ -2,7 +2,7 @@ import { DateTime, Default, Id, Model, OneToMany, Property, PropertyDecoratorWra
 import { SignupMethodEnum, SignupMethodType} from "~/enums/SignupMethod.enum";
 import { SocialProviderEnum } from "~/enums/SocialProvider.enum";
 import { SocialConnection } from "./SocialConnection.model";
-
+import { TokenCluster } from "./TokenCluster.model";
 @Model()
 export class User {
     // id
@@ -10,7 +10,6 @@ export class User {
     @Id("uuid")
     id: string;
     
-
     // created at
     @Default("now")
     @Property(() => DateTime)
@@ -30,16 +29,18 @@ export class User {
     @Property(() => SignupMethodEnum)
     signupMethod: SignupMethodType;
 
+    // email
     @Unique()
     @Property(() => String)
     email: string;
 
+    // pasword
     @Property(() => String, { nullable: true })
     password?: string;
 
     @OneToMany(() => SocialConnection, (a) => a.user)
     socialConnections: SocialConnection[];
 
-    //@OneToMany(() => TokenCluster, (a) => a.user)
-    //tokenClusters: TokenCluster[];
+    @OneToMany(() => TokenCluster, (a) => a.user)
+    tokenClusters: TokenCluster[];
 }
