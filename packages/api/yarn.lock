@@ -1708,6 +1708,14 @@ fast-write-atomic@0.2.1:
   resolved "https://registry.yarnpkg.com/fast-write-atomic/-/fast-write-atomic-0.2.1.tgz#7ee8ef0ce3c1f531043c09ae8e5143361ab17ede"
   integrity sha512-WvJe06IfNYlr+6cO3uQkdKdy3Cb1LlCJSF8zRs2eT8yuhdbSlR9nIt+TgQ92RUxiRrQm+/S7RARnMfCs5iuAjw==
 
+fastify-auth@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/fastify-auth/-/fastify-auth-1.1.0.tgz#75076c9c0664addaff07078907db6432086be1d6"
+  integrity sha512-8IajmAZB3QJ3wTP0q8Z3TG9DkxrIcAlS85TdPCBEfJi3mMKQd/sCYxtZ0dYv11v5hZaJ9z8XmNzhK3AH6/JpNw==
+  dependencies:
+    fastify-plugin "^3.0.0"
+    reusify "^1.0.4"
+
 fastify-autoload@^3.11.0:
   version "3.11.0"
   resolved "https://registry.yarnpkg.com/fastify-autoload/-/fastify-autoload-3.11.0.tgz#7c2547366ea65229b5d0c72f60004ff46cc1a200"
