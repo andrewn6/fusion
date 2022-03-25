@@ -7,7 +7,7 @@
   "license": "MIT",
   "scripts": {
     "build": "tsc && tsc-alias",
-    "start": "npm run build && node dist/index.js"
+    "start": "npm run build && node dist/server.js"
   },
   "dependencies": {
     "@prisma/client": "^3.10.0",

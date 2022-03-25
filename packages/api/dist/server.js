@@ -1,7 +1,11 @@
 "use strict";
 var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
     if (k2 === undefined) k2 = k;
-    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
 }) : (function(o, m, k, k2) {
     if (k2 === undefined) k2 = k;
     o[k2] = m[k];
@@ -54,21 +58,19 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
         if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
     }
 };
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
 exports.__esModule = true;
-//import { join } from "path";
-var fastify_1 = __importDefault(require("fastify"));
 var dotenv = __importStar(require("dotenv"));
-var fastify = (0, fastify_1["default"])();
+var logger_1 = require("./providers/logger");
+var fastify = Fastify();
 var port = Number(process.env.PORT) || 3000;
 function runServer() {
     fastify.listen(port, "0.0.0.0", function (err, address) {
         if (!err) {
-            console.log("Server running at ${address}");
+            logger_1.logger.info("Server running at ".concat(address));
             return;
         }
+        logger_1.logger.error(err.message);
+        return process.exit(1);
     });
 }
 function main() {
