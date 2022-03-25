@@ -16,7 +16,7 @@ function runServer(): void {
       return;
     }
 
-    console.log(err.message);
+    logger.error(err.message);
     return process.exit(1);
   });
 }
