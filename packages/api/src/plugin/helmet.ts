@@ -1,6 +1,6 @@
-import fpn from "fastify-plugin";
+import fp from "fastify-plugin";
 import helmet from "fastify-helmet";
 
-export default fpn(async (fastify, _) => {
+export default fp(async (fastify, _) => {
     fastify.register(helmet)
 })
