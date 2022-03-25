@@ -5,6 +5,10 @@
   "main": "index.js",
   "author": "Andrew N",
   "license": "MIT",
+  "scripts": {
+    "build": "tsc && tsc-alias",
+    "start": "npm run build && node dist/index.js"
+  },
   "dependencies": {
     "@prisma/client": "^3.10.0",
     "@sinclair/typebox": "^0.23.4",

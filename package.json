@@ -1,6 +1,7 @@
 {
   "name": "fusion",
   "version": "1.0.0",
+  "type": "module",
   "description": "A music platform built for muscians by muscians",
   "main": "index.js",
   "license": "MIT",

@@ -1,5 +1,5 @@
 //import { join } from "path";
-import Fastify from "fastify";
+import fastify from "fastify";
 //import * as fastifyBlipp from "fastify-blipp";
 import { Server, IncomingMessage, ServerResponse } from "http";
 import * as dotenv from "dotenv";

@@ -11,33 +11,33 @@ datasource db {
 }
 
 model Post {
-  id Int @id @default(autoincrement()) 
-  title String @default("") @db.VarChar(100)
+  id       Int      @id @default(autoincrement())
+  title    String   @default("") @db.VarChar(100)
   createat DateTime @default(now()) @db.Timestamp(0)
-  content String? @db.Text
+  content  String?  @db.Text
 }
 
 model User {
-  id String @id @default(uuid())
-  createdAt DateTime @default(now())
-  updatedAt DateTime @default(now())
-  username String @unique
-  signupMethod SignupMethod
-  isVerified Boolean?
-  email String @unique
-  password String?
+  id                String             @id @default(uuid())
+  createdAt         DateTime           @default(now())
+  updatedAt         DateTime           @default(now())
+  username          String             @unique
+  signupMethod      SignupMethod
+  isVerified        Boolean?
+  email             String             @unique
+  password          String?
   socialConnections SocialConnection[] @relation("SocialConnection_user")
-  tokenClusters TokenCluster[] @relation("TokenCluster_user")
+  tokenClusters     TokenCluster[]     @relation("TokenCluster_user")
 }
 
 model TokenCluster {
-  id String @id @default(uuid())
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
-  accessToken String @unique
-  refreshToken String @unique
-  user User @relation("TokenCluster_user", fields: [userId], references: [id])
-  userId String
+  id           String   @id @default(uuid())
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+  accessToken  String   @unique
+  refreshToken String   @unique
+  user         User     @relation("TokenCluster_user", fields: [userId], references: [id])
+  userId       String
 }
 
 model SocialConnection {
@@ -53,7 +53,6 @@ model SocialConnection {
   userId                   String
 }
 
-
 enum SignupMethod {
   DISCORD
   TWITTER
@@ -61,6 +60,6 @@ enum SignupMethod {
 }
 
 enum SocialProvider {
-  TWITTER 
+  TWITTER
   DISCORD
 }
